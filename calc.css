@@ -177,7 +177,8 @@ input
   {
    margin: 5% 0%;
    height: 60px;
-   width: 60px;
+   font-size: 20px;
+   width: 50px;
   }
   .inp,.inp2
 
@@ -185,6 +186,7 @@ input
   
    height: 120px;
    width: 100%;
+   font-size: 20px;
    font-size: 66px;
  }
  .inp2
