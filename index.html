@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+  </head>
+  <body>
+    <div class="body">
+    
+    <form name="calculate" class="form" >
+      <br>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <input class="inp2" type="text" name="text2" placeholder="" readonly>
+    <input type="text" class="inp" name="text1" placeholder="0" readonly>
+                        <br></br>    <br>
+                        <div class="buttonGroup">  
+    
+         <table>
+          <tr>
+            <td>        <button class="btn"   onclick="document.calculate.text1.value+='**';return false;">x<sup>n</sup></sup></button>            </td>
+            <td>        <button class="btn"   onclick="document.calculate.text1.value+='(';return false">(</button></td>
+            <td><button class="btn"   onclick="document.calculate.text1.value+=')';return false">)</button></td>
+            <td><button class="btn"   onclick="document.calculate.text1.value+='%';return false">%</button></td>
+            <td><button class="btn" type="reset" value="del" ><i class="fa fa-trash-o"></i></button></td>
+          </tr>
+          <tr>
+            <td><button class="btn"   onclick="process(15);return false"> &#8730 </button></td>
+            <td><button class="btn"   onclick="document.calculate.text1.value+='7';return false">7</button></td>
+          <td><button class="btn"   onclick="document.calculate.text1.value+='8';return false">8</button></td>
+        <td><button class="btn"   onclick="document.calculate.text1.value+='9';return false">9</button></td>
+        <td><button class="btn"   onclick="document.calculate.text1.value+='*';return false">&times</button></td>
+
+        
+          </tr>
+          <tr>
+            <td><button class="btn"   onclick="process(20);return false"> tan </button></td>
+            <td> <button class="btn"  onclick="document.calculate.text1.value+='4';return false">4 </button></td>
+            <td><button class="btn"  onclick="document.calculate.text1.value+='5';return false">5</button></td>
+            <td><button class="btn"  onclick="document.calculate.text1.value+='6';return false">6</button></td>
+            <td><button class="btn"   onclick="document.calculate.text1.value+='-';return false"><i class="bi bi-dash"></i></button></td>
+
+          </tr>
+          <tr>
+<td><button class="btn"   onclick="process(19);return false"> cos </button></td>
+<td><button class="btn"   onclick="document.calculate.text1.value+='1';return false">1</button></td>
+ <td> <button class="btn"   onclick="document.calculate.text1.value+='2';return false">2</button></td>
+ <td> <button class="btn"   onclick="document.calculate.text1.value+='3';return false">3</button></td>
+ <td><button class="btn"   onclick="document.calculate.text1.value+='+';return false"><i class="bi bi-plus"></i></button></td>
+
+          </tr>
+          <tr>
+            <td><button class="btn"   onclick="process(18);return false"> sin </button></td>
+            <td><button class="btn"   onclick="document.calculate.text1.value+='.';return false"><i class="bi bi-dot"></i></button></td>
+            <td><button class="btn"   onclick="document.calculate.text1.value+='0';return false">0</button></td>
+            <td><button class="btn"   onclick="document.calculate.text1.value+='/';return false">&#247</button></td>
+            <td><button class="btn"   onclick="process(16);return false">=</button></td>
+          </tr>
+         </table>
+        
+      
+        
+        
+        </div>
+        
+                       
+        </form>
+      </div>
+        
+    <script>
+     function process(a)
+     {   
+         switch(a)
+         {
+          
+           case 15: document.calculate.text2.value="&#8730";
+                    var b=document.calculate.text1.value;
+                    document.calculate.text2.value=Math.sqrt(b);break;
+         case 16:
+         
+                try
+                {
+                    var expression=document.calculate.text1.value;
+                    document.calculate.text2.value=expression;
+                    document.calculate.text1.value=eval(expression);
+                }
+                catch(err)
+                {
+                  document.calculate.text1.value="error";
+                }
+                break;
+         case 17: 
+                  var  b=document.calculate.text1.value;
+                  var c= b.substr(0,b.length-1);
+                  document.calculate.text1.value=c;break; 
+         case 18: b=document.calculate.text1.value;
+                  document.calculate.text2.value=Math.sin(b*0.017483);break; 
+         case 19:  b=document.calculate.text1.value;
+                  document.calculate.text2.value=Math.cos(b*0.017483);break; 
+         case 20:  b=document.calculate.text1.value;
+                  document.calculate.text2.value=Math.tan(b*0.017483);break; 
+         case 21: b=document.calculate.text1.value;
+                 break;      
+      } 
+     }
+      </script>
+    </body>
+</html>
