@@ -197,3 +197,39 @@ input
   font-size: 50px;
  }
 }
+@media only screen and ( max-width: 1000px) and (min-width:700px) {
+  .body
+  {
+   height: calc(96%);
+   width: 95%;
+    
+  }
+  .btn
+  {
+   margin: 5% 0%;
+   height: 60px;
+   font-size: 20px;
+   width: 60px;
+  }
+  .form
+  {
+    margin: auto;
+    width: 50%;
+  }
+  .inp,.inp2
+
+ {
+  
+   height: 120px;
+   width: 100%;
+   font-size: 20px;
+   font-size: 66px;
+ }
+ .inp2
+ {
+  height: 80px;
+  margin-top:5% ;
+  width: 100%;
+  font-size: 50px;
+ }
+}
